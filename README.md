@@ -61,7 +61,7 @@
 		- base &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 基类
 		- bean &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 实体类
 		- utils&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;工具类
-	- features&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;功能
+	- features&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;功能
 		- detail&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;详情
 		- find&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;发现
 		- home&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;主页
@@ -70,7 +70,7 @@
 		- type &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;标签管理
 		- version&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 版本更新
 	- MainActivity&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 主界面
-	- SplashActivity&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 欢迎界面
+	- SplashActivity&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;欢迎界面
 
 
 ## 踩坑经历 ##
@@ -82,7 +82,7 @@
 整个项目包括 服务器端、爬虫、app，但这里只开源了 app，主要是对其他端水平不自信，不想拿出来献丑。
 
 难度不大，但一个人做难免觉得有点累(虽然我已经很久不敢说累了)。
-虽说工作室有服务器端的，但不能让人家白干活。
+虽说工作室有后端的，但不能让人家白干活。
 
 本来还打算顺便做个网页版的，但愧于工作还没着落，所以决定先放一放。
 
@@ -92,12 +92,12 @@
 
 ## 求职 ##
 
-最后这里打一个求职广告。
+最后请原谅我打一个求职广告。
 
 年后打算去深圳找份安卓开发的工作（预计可以从3月工作到8月底），如果哪位大佬看得上鄙人的 [简历](http://ittianyu.deercv.com/)（没写学校是怕被抓到开除了），请把公司名、地址、职位、薪资、面试时间发到我邮箱 86839868@qq.com （最好支持远程面试）。
 
 解释一下，本人大三，下学期没课(我没选课)，但没实习政策，学校规定擅自离校会被开除。
-各位大佬也别先骂我心急，因为学校没有明文实习政策，问过好多老师也说大四下学期完全没课了才能出去实习(毕设都要搞一个多月，实习个...)，所以这是我毕业前最后一次机会。
+各位大佬也别先骂我心急，因为学校没有明文实习政策，问过好多老师也说大四下学期完全没课了才能出去实习(毕设都要搞一个多月，实习个...)，所以这是我毕业前最后一次机会，也请各位大佬给我一个机会。
 
 ## 授权 ##
 
