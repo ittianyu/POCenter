@@ -4,7 +4,7 @@
 
 ![MIT License](https://img.shields.io/github/license/mashape/apistatus.svg) ![api 15+](https://img.shields.io/badge/API-14%2B-green.svg)
 
-## About Us 关于我们 ##
+## 关于我们 ##
 [![天宇工作室](https://github.com/ittianyu/MobileGuard/blob/master/read_me_images/logo-transparent.png?raw=true)](http://www.ittianyu.com)
 
 ## 功能 ##
