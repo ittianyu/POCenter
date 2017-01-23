@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <android.support.design.widget.CoordinatorLayout xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_with_view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".features.viewpager.WithViewPagerActivity">
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/vp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.ittianyu.bottomnavigationviewex.BottomNavigationViewEx
+            android:id="@+id/bnve"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:background="@android:color/white"
+            app:itemIconTint="@color/selector_item_color"
+            app:itemTextColor="@color/selector_item_color"
+            app:layout_behavior="@string/bye_burger_bottom_behavior"
+            app:menu="@menu/menu_navigation" />
+
+    </android.support.design.widget.CoordinatorLayout>
+</layout>

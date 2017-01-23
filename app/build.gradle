@@ -1,0 +1,109 @@
+apply plugin: 'com.android.application'
+
+android {
+//    signingConfigs {
+//        release {
+//            keyAlias 'pocenter'
+//            keyPassword 'xxx'
+//            storeFile file('keystore.jks')
+//            storePassword 'xxx'
+//        }
+//    }
+    compileSdkVersion 25
+    buildToolsVersion "25.0.0"
+    defaultConfig {
+        applicationId "com.ittianyu.pocenter"
+        minSdkVersion 14
+        targetSdkVersion 25
+        versionCode 1
+        versionName "1.0.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        multiDexEnabled true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+//            signingConfig signingConfigs.release// 使用签名
+        }
+    }
+    dataBinding {
+        enabled true
+    }
+    android.defaultConfig.vectorDrawables.useSupportLibrary = true
+    // 多渠道打包
+//    productFlavors {
+//        tianyu {}
+//        productFlavors.all { flavor ->
+//            flavor.manifestPlaceholders = [UMENG_CHANNEL_VALUE: name]
+//        }
+//    }
+}
+
+// TinkerPatch 相关的配置
+apply from: 'tinkerpatch.gradle'
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestCompile('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    compile 'com.android.support:appcompat-v7:25.1.0'
+    testCompile 'junit:junit:4.12'
+    // leakcanary
+    debugCompile 'com.squareup.leakcanary:leakcanary-android:1.5'
+    releaseCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    testCompile 'com.squareup.leakcanary:leakcanary-android-no-op:1.5'
+    // log
+    compile 'com.orhanobut:logger:1.15'
+    // http
+    compile 'com.squareup.okhttp3:okhttp:3.4.1'
+    compile 'com.squareup.okio:okio:1.10.0'
+    // retrofit
+    compile 'com.squareup.retrofit2:retrofit:2.1.0'
+    compile 'com.squareup.retrofit2:converter-gson:2.1.0'
+    // json
+    compile 'com.google.code.gson:gson:2.7'
+    // RxJava2
+    compile 'io.reactivex.rxjava2:rxjava:2.0.0'
+    compile 'io.reactivex.rxjava2:rxandroid:2.0.0'
+    compile 'org.reactivestreams:reactive-streams:1.0.0'
+    // retrofit-adapter
+    compile 'com.jakewharton.retrofit:retrofit2-rxjava2-adapter:1.0.0'
+    // RxCache
+    compile 'com.github.VictorAlbertos.RxCache:runtime:1.6.9-2.x'
+    // To use Gson
+    compile 'com.github.VictorAlbertos.Jolyglot:gson:0.0.3'
+    // other
+    compile 'com.github.ittianyu:BottomNavigationViewEx:1.1.2'
+    // bottom navigation
+    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.6.1'
+    // recycler adapter
+    compile 'com.github.ittianyu:mvp:0.0.1'
+    // mvp
+    compile 'com.github.githubwing:ByeBurger:1.2.3'
+    // hide actionbar and bottom navigation
+    compile 'com.zhy:flowlayout-lib:1.0.3'
+    // flow tag
+    compile 'com.victor:lib:1.0.4'
+    // loading animation
+    compile 'com.github.arimorty:floatingsearchview:2.0.3'
+    // search view
+    compile 'com.allenliu:checkversionlib:1.0.4'
+    // check version
+    // share sdk
+    compile files('libs/MobCommons-2016.1222.1756.jar')
+    compile files('libs/MobTools-2016.1222.1756.jar')
+    compile files('libs/ShareSDK-Core-2.8.0.jar')
+    compile files('libs/ShareSDK-Email-2.8.0.jar')
+    compile files('libs/ShareSDK-QQ-2.8.0.jar')
+    compile files('libs/ShareSDK-Wechat-2.8.0.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.8.0.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.8.0.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.8.0.jar')
+    // share sdk end
+    // 友盟统计
+    compile 'com.umeng.analytics:analytics:latest.integration'
+    // TinkerPatch SDK
+    compile 'com.tinkerpatch.sdk:tinkerpatch-android-sdk:1.1.0'
+}

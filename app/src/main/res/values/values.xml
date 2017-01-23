@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="v_content" type="id" />
+    <item name="v_loading" type="id" />
+    <item name="v_error" type="id" />
+    <item name="v_empty" type="id" />
+</resources>

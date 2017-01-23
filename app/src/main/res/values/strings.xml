@@ -1,0 +1,39 @@
+<resources>
+    <string name="app_name" translatable="false">外包集中营</string>
+    <string name="no_data" translatable="false">没有数据</string>
+    <string name="failed_to_refresh" translatable="false">刷新失败</string>
+    <string name="failed_to_load_click_to_reload" translatable="false">加载失败，点击重新加载</string>
+    <string name="home" translatable="false">首页</string>
+    <string name="find" translatable="false">发现</string>
+    <string name="mine" translatable="false">我的</string>
+    <string name="ok" translatable="false">确定</string>
+    <string name="type_other" translatable="false">其他</string>
+    <string name="type_web" translatable="false">网站开发</string>
+    <string name="type_we_chat" translatable="false">微信/小程序</string>
+    <string name="type_html5" translatable="false">HTML5</string>
+    <string name="type_app" translatable="false">移动 APP</string>
+    <string name="type_intelligent_hardware" translatable="false">智能硬件</string>
+    <string name="type_desktop_app" translatable="false">桌面应用</string>
+    <string name="type_big_data" translatable="false">大数据</string>
+    <string name="type_system" translatable="false">系统开发</string>
+    <string name="type_sdk_api" translatable="false">SDK/API</string>
+    <string name="type_art" translatable="false">美工设计</string>
+    <string name="unit_people" translatable="false">人</string>
+    <string name="unit_day" translatable="false">天</string>
+    <string name="toast_select_one_or_more_type" translatable="false">请先选择一个或多个关注的类型</string>
+    <string name="search" translatable="false">搜索</string>
+    <string name="refresh" translatable="false">刷新</string>
+    <string name="open_in_browser" translatable="false">在浏览器中打开</string>
+    <string name="share" translatable="false">分享</string>
+    <string name="tag_manager" translatable="false">标签管理</string>
+    <string name="version_check" translatable="false">版本更新</string>
+    <string name="about" translatable="false">关于</string>
+    <string name="user_nick" translatable="false">我可能是登录了假账号</string>
+    <string name="user_info" translatable="false">敬请期待</string>
+    <string name="tips_about_us" translatable="false">© 2017 天宇工作室.版权所有\n\t\t\twww.ittianyu.com</string>
+    <string name="tips_tianyu" translatable="false">© 2017 天宇工作室\nwww.ittianyu.com</string>
+    <string name="tips_already_last_version" translatable="false">已经是最新版本</string>
+    <string name="exit_if_repeat" translatable="false">再点一次退出</string>
+    <string name="select_all" translatable="false">全选</string>
+    <string name="cancel_all" translatable="false">取消所有</string>
+</resources>

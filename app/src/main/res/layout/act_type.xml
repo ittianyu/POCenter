@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data></data>
+
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/activity_type"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.ittianyu.pocenter.features.type.TypeActivity">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/tb"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/tag_manager"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+        </android.support.v7.widget.Toolbar>
+
+        <com.zhy.view.flowlayout.TagFlowLayout
+            android:id="@+id/tfl"
+            android:layout_below="@id/tb"
+            android:layout_centerHorizontal="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            app:gravity="center"
+            app:max_select="-1"></com.zhy.view.flowlayout.TagFlowLayout>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:textColor="@android:color/white"
+            android:background="@drawable/selector_button"
+            android:layout_margin="@dimen/activity_horizontal_margin"
+            android:text="@string/ok" />
+    </RelativeLayout>
+</layout>

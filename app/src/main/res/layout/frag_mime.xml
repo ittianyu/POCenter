@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data></data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary">
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="@string/mine"
+                android:textColor="@android:color/white"
+                android:textSize="18sp" />
+
+        </android.support.v7.widget.Toolbar>
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_marginTop="@dimen/activity_vertical_margin">
+
+            <LinearLayout
+                android:background="@drawable/selector_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="5dp"
+                android:paddingTop="5dp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    app:srcCompat="@drawable/ic_github" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="@dimen/activity_horizontal_margin"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="3dp"
+                        android:text="@string/user_nick"
+                        android:textColor="@android:color/black"
+                        android:textSize="15sp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="@string/user_info" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/shape_drive_line"
+                android:orientation="vertical"
+                android:showDividers="middle">
+
+                <LinearLayout
+                    android:id="@+id/ll_tag_manager"
+                    style="@style/mime_ll_setting">
+
+                    <ImageView
+                        style="@style/mime_iv_setting"
+                        app:srcCompat="@drawable/ic_type" />
+
+                    <TextView
+                        style="@style/mime_tv_setting"
+                        android:text="@string/tag_manager" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_version_check"
+                    style="@style/mime_ll_setting">
+
+                    <ImageView
+                        style="@style/mime_iv_setting"
+                        app:srcCompat="@drawable/ic_version_check" />
+
+                    <TextView
+                        style="@style/mime_tv_setting"
+                        android:text="@string/version_check" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_about"
+                    style="@style/mime_ll_setting">
+
+                    <ImageView
+                        style="@style/mime_iv_setting"
+                        app:srcCompat="@drawable/ic_about" />
+
+                    <TextView
+                        style="@style/mime_tv_setting"
+                        android:text="@string/about" />
+                </LinearLayout>
+            </LinearLayout>
+
+        </android.support.v7.widget.CardView>
+
+    </LinearLayout>
+</layout>
