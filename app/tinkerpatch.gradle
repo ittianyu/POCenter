@@ -1,0 +1,105 @@
+apply plugin: 'tinkerpatch-support'
+
+def bakPath = file("${buildDir}/bakApk/")
+
+def baseInfo = "app-0115-23-11-20"
+def variantName = "debug"
+
+/**
+ * 对于插件各参数的详细解析请参考
+ * http://tinkerpatch.com/Docs/SDK
+ */
+tinkerpatchSupport {
+    /** 可以在debug的时候关闭 tinkerPatch **/
+    tinkerEnable = false
+    reflectApplication = true
+
+    autoBackupApkPath = "${bakPath}"
+
+    appKey = "1ff86eb14499a4d9"
+    appVersion = "1.0.0"
+
+    def pathPrefix = "${bakPath}/${baseInfo}/${variantName}/"
+    def name = "${project.name}-${variantName}"
+
+    baseApkFile = "${pathPrefix}/${name}.apk"
+    baseProguardMappingFile = "${pathPrefix}/${name}-mapping.txt"
+    baseResourceRFile = "${pathPrefix}/${name}-R.txt"
+
+//    baseApkFile = "G:/大学学习记录/工作室产品/外包集中营/安装包/app-1.0.0-0121-22-56-37/pocenter_baidu_1.0.0.apk"
+//    baseProguardMappingFile = "G:/大学学习记录/工作室产品/外包集中营/安装包/app-1.0.0-0121-22-56-37/app-release-mapping.txt"
+//    baseResourceRFile = "G:/大学学习记录/工作室产品/外包集中营/安装包/app-1.0.0-0121-22-56-37/app-release-R.txt"
+
+    /** 若有编译多flavors需求,可在flavors中覆盖以下参数
+     *  你也可以直接通过tinkerPatchAllFlavorDebug/tinkerPatchAllFlavorRelease, 一次编译所有的flavor补丁包
+     *  注意的是:除非你不同的flavor代码是不一样的,不然建议采用zip comment或者文件方式生成渠道信息
+     **/
+//    productFlavors {
+//        flavor {
+//            flavorName = "tianyu"
+//            appVersion = "${tinkerpatchSupport.appVersion}_${flavorName}"
+//
+//            pathPrefix = "${bakPath}/${baseInfo}/${flavorName}${variantName}/"
+//            name = "${project.name}-${flavorName}${variantName}"
+//
+//            baseApkFile = "${pathPrefix}/${name}.apk"
+//            baseProguardMappingFile = "${pathPrefix}/${name}-mapping.txt"
+//            baseResourceRFile = "${pathPrefix}/${name}-R.txt"
+//        }
+//
+//        flavor {
+//            flavorName = "flavor2"
+//            appVersion = "${tinkerpatchSupport.appVersion}_${flavorName}"
+//
+//            pathPrefix = "${bakPath}/${baseInfo}/${flavorName}${variantName}/"
+//            name = "${project.name}-${flavorName}${variantName}"
+//
+//            baseApkFile = "${pathPrefix}/${name}.apk"
+//            baseProguardMappingFile = "${pathPrefix}/${name}-mapping.txt"
+//            baseResourceRFile = "${pathPrefix}/${name}-R.txt"
+//        }
+//    }
+}
+
+/**
+ * 用于用户在代码中判断tinkerPatch是否被使能
+ */
+android {
+    defaultConfig {
+        buildConfigField "boolean", "TINKER_ENABLE", "${tinkerpatchSupport.tinkerEnable}"
+    }
+}
+
+/**
+ * 一般来说,我们无需对下面的参数做任何的修改
+ * 对于各参数的详细介绍请参考:
+ * https://github.com/Tencent/tinker/wiki/Tinker-%E6%8E%A5%E5%85%A5%E6%8C%87%E5%8D%97
+ */
+tinkerPatch {
+    ignoreWarning = false
+    useSign = true
+    dex {
+        dexMode = "jar"
+        pattern = ["classes*.dex"]
+        loader = []
+    }
+    lib {
+        pattern = ["lib/*/*.so"]
+    }
+
+    res {
+        pattern = ["res/*", "r/*", "assets/*", "resources.arsc", "AndroidManifest.xml"]
+        ignoreChange = []
+        largeModSize = 100
+    }
+
+    packageConfig {
+    }
+    sevenZip {
+        zipArtifact = "com.tencent.mm:SevenZip:1.1.10"
+//        path = "/usr/local/bin/7za"
+    }
+    buildConfig {
+        keepDexApply = false
+    }
+}
