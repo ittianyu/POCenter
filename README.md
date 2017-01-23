@@ -34,6 +34,7 @@
 已在 [百度手机助手](http://shouji.baidu.com/software/10867391.html)、[91市场](http://apk.91.com/Soft/Android/com.ittianyu.pocenter-1.html)、[安卓市场](http://apk.hiapk.com/appinfo/com.ittianyu.pocenter/1) 上线。
 
 贴出二维码方便下载
+
 ![](http://d.hiphotos.bdimg.com/wisegame/pic/item/72dfa9ec8a136327b9c91278988fa0ec08fac752.jpg)
 
 ## 技术点 ##
